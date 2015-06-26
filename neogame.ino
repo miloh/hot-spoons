@@ -1,10 +1,11 @@
-#include <FastSPI_LED2.h>
+#include <SoftwareSerial.h>
+#include <FastLED.h>
 #include <SerialCommand.h>
 #include "fastspi_strip.h"
 #include "button.h"
 #include "game.h"
 
-#define NUM_LEDS 240
+#define NUM_LEDS 255
 
 Button button4 = Button(11);
 Button button5 = Button(12);
