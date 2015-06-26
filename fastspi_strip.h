@@ -1,4 +1,4 @@
-#include <FastSPI_LED2.h>
+#include <FastLED.h>
 
 class fastspi_strip {
   int BOTTOM_INDEX;
