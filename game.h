@@ -1,4 +1,4 @@
-#include "noise.h"
+//#include "noise.h"
 #define TIMEWINDOW 30
 #define SHOT 10
 #define PENALTY 4
@@ -35,7 +35,7 @@ public:
   }
 
   void loop() {
-    makeNoise();
+//    makeNoise();
     CRGB puck_color = red;
     if (lockout) {
       puck_color = blue;
@@ -59,9 +59,9 @@ public:
     }
     strip.set_color_led(num_leds-1, 0, 0, 0);
 
-    if (!b1fired && !b2fired) {
-      whichTune = -1;
-    }
+//   if (!b1fired && !b2fired) {
+//      whichTune = -1;
+//    }
 
     if (strip.leds[puck-PUCK_PADDING-1] != off) {
       strip.set_color_led(puck-PUCK_PADDING-1, 0, 0, 0);
@@ -128,7 +128,7 @@ public:
 
   void b1fire() {
     Serial.println("pew!");
-    whichTune = PEW;  // make the PEW noise!
+    //whichTune = PEW;  // make the PEW noise!
     for (int i=0; i < SHOT; i++) {
       strip.set_color_led(i, color1);
     }
@@ -137,7 +137,7 @@ public:
 
   void b2fire() {
     Serial.println("bew!");
-    whichTune = BEW;  // make the BEW noise!
+    //whichTune = BEW;  // make the BEW noise!
     for (int i=0; i < SHOT; i++) {
       strip.set_color_led(num_leds-1-i, color2);
     }
